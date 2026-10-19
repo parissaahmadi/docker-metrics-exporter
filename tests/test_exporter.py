@@ -62,7 +62,7 @@ def test_repeated_scrapes_are_each_valid_and_the_counter_only_grows():
     clock = Clock()
     ex = Exporter({"fleet": FleetCollector(clock=clock)})
     last = {}
-    for step in range(30):
+    for _step in range(30):
         clock.t += 45
         got = parse(ex.scrape())
         now = got["plant_device_runtime_seconds_total"]["samples"]
