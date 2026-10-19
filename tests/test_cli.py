@@ -2,6 +2,7 @@ import io
 import logging
 
 import pytest
+
 from helpers import FakeDocker, container, parse, value
 from metrics_exporter.cli import build_exporter, build_parser, main
 

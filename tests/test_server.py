@@ -6,6 +6,7 @@ import threading
 import time
 
 import pytest
+
 from helpers import Clock, parse, value
 from metrics_exporter.exporter import Exporter
 from metrics_exporter.server import ExporterServer, Handler

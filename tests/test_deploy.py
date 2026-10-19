@@ -8,6 +8,7 @@ import re
 from pathlib import Path
 
 import yaml
+
 from helpers import FakeDocker, container, parse
 from metrics_exporter.dockerapi import DockerCollector
 from metrics_exporter.exporter import Exporter

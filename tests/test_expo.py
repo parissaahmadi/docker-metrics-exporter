@@ -2,6 +2,7 @@ import math
 import random
 
 import pytest
+
 from helpers import parse, value
 from metrics_exporter.expo import (
     ExpositionError,

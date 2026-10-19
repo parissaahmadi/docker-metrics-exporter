@@ -7,8 +7,8 @@ import logging
 import sys
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
-from .exporter import Exporter
 from .expo import CONTENT_TYPE
+from .exporter import Exporter
 
 log = logging.getLogger("metrics_exporter")
 
