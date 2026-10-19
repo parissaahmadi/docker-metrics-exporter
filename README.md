@@ -1,4 +1,4 @@
-![ci](https://github.com/<USERNAME>/docker-metrics-exporter/actions/workflows/ci.yml/badge.svg)
+![ci](https://github.com/parissaahmadi/docker-metrics-exporter/actions/workflows/ci.yml/badge.svg)
 
 # docker-metrics-exporter
 
