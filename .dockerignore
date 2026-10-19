@@ -1,0 +1,6 @@
+.git
+.venv
+tests
+deploy
+__pycache__
+*.zip
