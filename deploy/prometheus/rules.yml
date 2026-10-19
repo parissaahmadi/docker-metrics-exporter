@@ -1,0 +1,42 @@
+groups:
+  - name: plant-recording
+    rules:
+      - record: site:plant_device_running:sum
+        expr: sum by (site) (plant_device_running * on (device) group_left (site) plant_device_info)
+
+  - name: plant-alerts
+    rules:
+      - alert: PlantExporterDown
+        expr: up{job="plant"} == 0
+        for: 2m
+        labels: {severity: warning}
+        annotations:
+          summary: "The plant exporter has not been scraped successfully for 2 minutes"
+
+      - alert: CollectorFailing
+        expr: exporter_collector_success == 0
+        for: 5m
+        labels: {severity: warning}
+        annotations:
+          summary: "Collector {{ $labels.collector }} is failing; check the exporter log"
+
+      - alert: DeviceVibrationHigh
+        expr: plant_device_vibration_alarm == 1
+        for: 5m
+        labels: {severity: critical}
+        annotations:
+          summary: "{{ $labels.device }} has been above the vibration threshold for 5 minutes"
+
+      - alert: DeviceHot
+        expr: plant_device_temperature_celsius > 90
+        for: 10m
+        labels: {severity: warning}
+        annotations:
+          summary: "{{ $labels.device }} housing temperature above 90 C for 10 minutes"
+
+      - alert: ContainerNotRunning
+        expr: docker_container_running == 0
+        for: 5m
+        labels: {severity: warning}
+        annotations:
+          summary: "Container {{ $labels.name }} is not running"
