@@ -7,6 +7,7 @@ A small Prometheus exporter, **standard library only**, for two things:
 1. a **simulated plant fleet** (compressors, pumps, a conveyor, a fan) so you can see a realistic dashboard without real machines;
 2. the **container inventory of a Docker host**, read from the Engine API (opt-in).
 
+
 It ships with a Prometheus + Grafana compose stack, alert rules and a provisioned dashboard.
 All devices, brands (Vortex, Helix, Ironwood, Nimbus) and numbers are invented. No real company data.
 
