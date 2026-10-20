@@ -10,6 +10,10 @@ A small Prometheus exporter, **standard library only**, for two things:
 It ships with a Prometheus + Grafana compose stack, alert rules and a provisioned dashboard.
 All devices, brands (Vortex, Helix, Ironwood, Nimbus) and numbers are invented. No real company data.
 
+## Dashboard preview
+
+![Plant overview dashboard](docs/dashboard-preview.png)
+
 ## What it exports
 
 | Metric | Type | Meaning |
